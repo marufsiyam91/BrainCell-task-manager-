@@ -18,7 +18,6 @@ const Form = () => {
             ...prevValue,
             [name]: value
         }))
-        console.log(handledData.title, handledData.description)
     }
 
     const handleSubmit = (e) => {
@@ -27,12 +26,25 @@ const Form = () => {
             ...prevTasks,
             handledData
         ]))
-        setHandledData({
-            title: '',
-            link: '',
-            image: '',
-            description: ''
+
+        fetch('http://localhost:5000/notes', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({taskData})
         })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+
+        // setHandledData({
+        //     title: '',
+        //     link: '',
+        //     image: '',
+        //     description: ''
+        // })
         console.log(taskData)
     }
 

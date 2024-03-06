@@ -4,14 +4,14 @@
     border: 1px solid rgb(8, 8, 8)31;
     background: #9bd7ffaf;
     border-radius: 1.5rem;
-    padding: 1.5%;
+    padding: 2rem 1.5rem;
 }
 
 .form_wrapper input{
     width: 100%;
     margin-bottom: 1rem;
     padding: .8rem;
-    border-radius: 2.5rem;
+    border-radius: .8rem;
     font-weight: 500;
     border: none;
     outline: none;
@@ -21,7 +21,8 @@ textarea{
     width: 100%;
     padding: .8rem;
     border-radius: 1rem;
-    border: 1px solid rgba(160, 162, 168, 0.13)21;
+    border: 1px solid rgba(254, 254, 255, 0.13)21;
+    outline: none;
 }
 
 .form_wrapper button{
@@ -31,4 +32,5 @@ textarea{
     outline: none;
     font-weight: 500;
     color: #212121;
+    background: #fff;
 }
